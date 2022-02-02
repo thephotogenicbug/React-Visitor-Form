@@ -7,8 +7,8 @@ export const createVisitorAction = (name, mobile, email, purpose, employee, pic)
             type:VISITOR_CREATE_REQUEST
         })
       const { data } = await axios.post(
-        `http://localhost:4000/api/v1/visitor/new`,
-        {name, mobile, email, purpose, employee, pic}
+        `https://visitor-form-api.herokuapp.com/api/v1/visitor/new`,
+        { name, mobile, email, purpose, employee, pic }
       );  
       dispatch({
           type:VISITOR_CREATE_SUCCESS,
