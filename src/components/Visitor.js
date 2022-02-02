@@ -16,7 +16,7 @@ import { useDispatch } from "react-redux";
 import { useAlert } from "react-alert";
 import { clearErrors, createVisitorAction } from "../action/visitorActions";
 
-const currencies = [
+const employeelist = [
   {
     value: "Ahmed Khan",
     label: "Ahmed Khan",
@@ -55,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Visitor = () => {
   const classes = useStyles();
-  const [currency, setCurrency] = useState("EUR");
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
@@ -78,6 +77,13 @@ const Visitor = () => {
   const SubmitHandler = (e) => {
     e.preventDefault();
     dispatch(createVisitorAction(name, mobile, email, purpose, employee, pic));
+    setName("");
+    setMobile("");
+    setEmail("");
+    setPurpose("");
+    setOptions("");
+    setPic("");
+    setEmployee("")
   };
 
   const postDetails = (pics) => {
@@ -200,7 +206,7 @@ const Visitor = () => {
                     size="small"
                     fullWidth="true"
                   >
-                    {currencies.map((option) => (
+                    {employeelist.map((option) => (
                       <MenuItem key={option.value} value={option.value}>
                         {option.label}
                       </MenuItem>
