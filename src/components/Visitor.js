@@ -81,7 +81,6 @@ const Visitor = () => {
     setMobile("");
     setEmail("");
     setPurpose("");
-    setOptions("");
     setPic("");
     setEmployee("")
   };
