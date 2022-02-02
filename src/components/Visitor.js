@@ -131,12 +131,19 @@ const Visitor = () => {
                   </TextField>
                 </Grid>
               </Grid>
+              <Grid container spacing={1} style={{ marginBottom: "10px" }}>
+                <Grid xs={12} sm={6} md={12} variant="outlined" item>
+                  <Button variant="contained" component="label">
+                    Upload File
+                    <input type="file" fullWidth="true" hidden />
+                  </Button>
+                </Grid>
+              </Grid>
               <Button
                 variant="contained"
                 color="primary"
                 className={classes.button}
-                endIcon={<SendIcon />}
-              >
+                endIcon={<SendIcon />}>
                 Send
               </Button>
             </div>
