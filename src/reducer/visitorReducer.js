@@ -1,4 +1,5 @@
 import {
+  CLEAR_ERRORS,
   VISITOR_CREATE_FAIL,
   VISITOR_CREATE_REQUEST,
   VISITOR_CREATE_SUCCESS,
@@ -12,6 +13,11 @@ export const createVisitorReducer = (state = {}, action) => {
       return { loading: false, success: true };
     case VISITOR_CREATE_FAIL:
       return { loading: false, error: action.payload };
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
     default:
       return state;
   }

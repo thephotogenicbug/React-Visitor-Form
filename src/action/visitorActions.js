@@ -1,5 +1,5 @@
 import axios from "axios"
-import { VISITOR_CREATE_FAIL, VISITOR_CREATE_REQUEST, VISITOR_CREATE_SUCCESS } from "../constants/visitorConstants"
+import { CLEAR_ERRORS, VISITOR_CREATE_FAIL, VISITOR_CREATE_REQUEST, VISITOR_CREATE_SUCCESS } from "../constants/visitorConstants"
 
 export const createVisitorAction = (name, mobile, email, purpose, employee, pic) => async (dispatch, getState) =>{
     try {
@@ -21,3 +21,9 @@ export const createVisitorAction = (name, mobile, email, purpose, employee, pic)
         });
     }
 }
+
+export const clearErrors = () => async (dispatch) => {
+  dispatch({
+    type: CLEAR_ERRORS,
+  });
+};
