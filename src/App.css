@@ -1,6 +1,15 @@
 .App {
   text-align: center;
+  position: relative;
+  font-family: sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 1;
 }
+
 
 .App-logo {
   height: 40vmin;
